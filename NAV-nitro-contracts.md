@@ -3,8 +3,8 @@
 *Core Arbitrum Nitro L1/L2 smart contracts - bridge (Inbox, Outbox, SequencerInbox), rollup management, BoLD challenge protocol, one-step proof verification, and token bridging.*
 
 ## Contents
-- Docs (1 files)
-- Src (141 files)
+- Docs
+- Src
 
 ## File Index
 

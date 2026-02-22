@@ -79,12 +79,12 @@ grep -ri "arbos.*[0-9]" run-arbitrum-node/arbos-releases/ notices/
 For the complete file listing of all documentation, see [NAV-docs.md](NAV-docs.md).
 
 ### Root
-*Overview and general documentation* (1 files)
+*Overview and general documentation*
 
 - [Security audit reports](audit-reports.md)
 
 ### Arbitrum Bridge
-*Token bridging between Ethereum and Arbitrum chains* (4 files)
+*Token bridging between Ethereum and Arbitrum chains*
 
 - [Arbitrum bridge transaction traceability](arbitrum-bridge/05-bridge-transaction-traceability.md)
 - [Arbitrum embedded bridge widget](arbitrum-bridge/04-embedded-bridge-widget.md)
@@ -92,7 +92,7 @@ For the complete file listing of all documentation, see [NAV-docs.md](NAV-docs.m
 - [USDC on Arbitrum One](arbitrum-bridge/02-usdc-arbitrum-one.md)
 
 ### Build Decentralized Apps
-*Building dApps on Arbitrum - cross-chain messaging, oracles, precompiles, token bridging* (26 files)
+*Building dApps on Arbitrum - cross-chain messaging, oracles, precompiles, token bridging*
 
 - [Arbitrum chains overview](build-decentralized-apps/03-public-chains.md)
 - [Build a decentralized app with Solidity (Quickstart)](build-decentralized-apps/01-quickstart-solidity-remix.md)
@@ -102,28 +102,28 @@ For the complete file listing of all documentation, see [NAV-docs.md](NAV-docs.m
 - **Subtopics:** Arbitrum Vs Ethereum, Nodeinterface, Oracles, Precompiles, Reference, Token Bridging
 
 ### For Devs
-*Developer tools, resources, and development frameworks* (29 files)
+*Developer tools, resources, and development frameworks*
 
 - **Subtopics:** Dev Tools And Resources, Oracles, Third Party Docs
 
 ### Get Started
-*Getting started with Arbitrum development* (1 files)
+*Getting started with Arbitrum development*
 
 - [Get started with Arbitrum](get-started/overview.md)
 
 ### How Arbitrum Works
-*Technical deep-dives into Arbitrum architecture - BOLD, AnyTrust, gas, sequencing* (20 files)
+*Technical deep-dives into Arbitrum architecture - BOLD, AnyTrust, gas, sequencing*
 
 - [Inside Arbitrum Nitro](how-arbitrum-works/01-inside-arbitrum-nitro.md)
 - **Subtopics:** Bold, Deep Dives, Timeboost
 
 ### Intro
-*Introduction to Arbitrum ecosystem* (1 files)
+*Introduction to Arbitrum ecosystem*
 
 - [Arbitrum glossary](intro/glossary.md)
 
 ### Launch Arbitrum Chain
-*Launching and configuring Arbitrum Orbit chains* (70 files)
+*Launching and configuring Arbitrum Orbit chains*
 
 - [A gentle introduction: Arbitrum chains](launch-arbitrum-chain/01-a-gentle-introduction.md)
 - [Arbitrum chain licensing](launch-arbitrum-chain/aep-license.md)
@@ -133,18 +133,18 @@ For the complete file listing of all documentation, see [NAV-docs.md](NAV-docs.m
 - **Subtopics:** 02 Configure Your Chain, 03 Deploy An Arbitrum Chain, 04 Maintain Your Chain, 05 Customize Your Chain, 06 Third Party Integrations, 07 Arbitrum Node Runners, 08 Ecosystem Support, Concepts, Features, How Tos
 
 ### Node Running
-*Node infrastructure and operations* (1 files)
+*Node infrastructure and operations*
 
 - [Sequencer](node-running/sequencer-content-map.md)
 
 ### Notices
-*Important notices and announcements* (2 files)
+*Important notices and announcements*
 
 - [Fusaka Compatibility Notice](notices/fusaka-upgrade-notice.md)
 - [Upgrade notice for ArbOS 51](notices/arbos51-upgrade-notice.md)
 
 ### Run Arbitrum Node
-*Running Arbitrum full nodes and validators* (25 files)
+*Running Arbitrum full nodes and validators*
 
 - [Arbitrum nodes: an overview](run-arbitrum-node/01-overview.md)
 - [Beacon Nodes: Historical Blobs](run-arbitrum-node/beacon-nodes-historical-blobs.md)
@@ -158,13 +158,13 @@ For the complete file listing of all documentation, see [NAV-docs.md](NAV-docs.m
 - **Subtopics:** Arbos Releases, More Types, Nitro, Sequencer
 
 ### Sdk
-*Arbitrum SDK documentation - bridgers, entities, messaging* (2 files)
+*Arbitrum SDK documentation - bridgers, entities, messaging*
 
 - [Introduction](sdk/index.md)
 - [Migrating from v3 to v4](sdk/migrate.md)
 
 ### Stylus
-*Stylus WASM smart contract development* (21 files)
+*Stylus WASM smart contract development*
 
 - [A gentle introduction to Stylus](stylus/gentle-introduction.md)
 - [CLI Tools (cargo-stylus)](stylus/cli-tools-overview.md)
@@ -181,17 +181,17 @@ Reference implementations, code examples, and architectural guides from key Arbi
 
 ### OpenZeppelin Rust Contracts for Stylus
 *Production-ready Rust smart contract implementations for Arbitrum Stylus - ERC20, ERC721, ERC1155, access control, proxy patterns, finance utilities, and cryptographic helpers.*
-- **332 files** — Full index: [NAV-openzeppelin-stylus.md](NAV-openzeppelin-stylus.md)
+- Full index: [NAV-openzeppelin-stylus.md](NAV-openzeppelin-stylus.md)
 - **Directories:** Contracts, Docs, Examples
 
 ### Stylus SDK for Rust
 *Core Rust SDK for building Arbitrum Stylus contracts - storage abstractions, ABI encoding, proc macros, host I/O, testing framework, and cargo-stylus CLI tool.*
-- **242 files** — Full index: [NAV-stylus-sdk.md](NAV-stylus-sdk.md)
+- Full index: [NAV-stylus-sdk.md](NAV-stylus-sdk.md)
 - **Directories:** Examples, Stylus Core, Stylus Proc, Stylus Sdk, Stylus Test
 
 ### Nitro Contracts (Solidity)
 *Core Arbitrum Nitro L1/L2 smart contracts - bridge (Inbox, Outbox, SequencerInbox), rollup management, BoLD challenge protocol, one-step proof verification, and token bridging.*
-- **142 files** — Full index: [NAV-nitro-contracts.md](NAV-nitro-contracts.md)
+- Full index: [NAV-nitro-contracts.md](NAV-nitro-contracts.md)
 - **Directories:** Docs, Src
 
 ## MCP Tools

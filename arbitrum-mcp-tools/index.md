@@ -8,17 +8,17 @@ This project provides a set of tools for interacting with the Arbitrum blockchai
 
 ### Table of Contents 📚
 
-* [Overview](https://arbitrum-mcp-tools.gitbook.io/arbitrum-mcp-tools-docs/readme)
-* [Setup Guide](https://arbitrum-mcp-tools.gitbook.io/arbitrum-mcp-tools-docs/setup-guide)
-* [Project Structure](https://arbitrum-mcp-tools.gitbook.io/arbitrum-mcp-tools-docs/project-structure)
-* [Network Tools](https://arbitrum-mcp-tools.gitbook.io/arbitrum-mcp-tools-docs/network-mcp-tools)
-  * [Account Analysis](https://arbitrum-mcp-tools.gitbook.io/arbitrum-mcp-tools-docs/network-mcp-tools/account-analysis)
-  * [Batch Operations](https://arbitrum-mcp-tools.gitbook.io/arbitrum-mcp-tools-docs/network-mcp-tools/batch-operations)
-  * [Chain Data](https://arbitrum-mcp-tools.gitbook.io/arbitrum-mcp-tools-docs/network-mcp-tools/chain-data)
-  * [Contract Interaction](https://arbitrum-mcp-tools.gitbook.io/arbitrum-mcp-tools-docs/network-mcp-tools/contract-interaction)
-  * [Cross Chain](https://arbitrum-mcp-tools.gitbook.io/arbitrum-mcp-tools-docs/network-mcp-tools/cross-chain-operations)
-  * [Development](https://arbitrum-mcp-tools.gitbook.io/arbitrum-mcp-tools-docs/network-mcp-tools/development)
-* [Stylus MCP Tools](https://arbitrum-mcp-tools.gitbook.io/arbitrum-mcp-tools-docs/stylus-mcp-tools)
+* [Overview](https://arbitrum-ai-hub.gitbook.io/docs)
+* [Setup Guide](https://arbitrum-ai-hub.gitbook.io/docs/arbitrum-mcp-tools/setup-guide)
+* [Project Structure](https://arbitrum-ai-hub.gitbook.io/docs/arbitrum-mcp-tools/project-structure)
+* [Network Tools](https://arbitrum-ai-hub.gitbook.io/docs/arbitrum-mcp-tools/network-mcp-tools)
+  * [Account Analysis](https://arbitrum-ai-hub.gitbook.io/docs/arbitrum-mcp-tools/network-mcp-tools/account-analysis)
+  * [Batch Operations](https://arbitrum-ai-hub.gitbook.io/docs/arbitrum-mcp-tools/network-mcp-tools/batch-operations)
+  * [Chain Data](https://arbitrum-ai-hub.gitbook.io/docs/arbitrum-mcp-tools/network-mcp-tools/chain-data)
+  * [Contract Interaction](https://arbitrum-ai-hub.gitbook.io/docs/arbitrum-mcp-tools/network-mcp-tools/contract-interaction)
+  * [Cross Chain](https://arbitrum-ai-hub.gitbook.io/docs/arbitrum-mcp-tools/network-mcp-tools/cross-chain-operations)
+  * [Development](https://arbitrum-ai-hub.gitbook.io/docs/arbitrum-mcp-tools/network-mcp-tools/development)
+* [Stylus MCP Tools](https://arbitrum-ai-hub.gitbook.io/docs/arbitrum-mcp-tools/stylus-mcp-tools)
 
 
 # Setup Guide 🛠️
@@ -238,7 +238,7 @@ If you have existing MCP configurations, the installer will merge them (not over
 For additional support:
 
 * GitHub Issues: <https://github.com/utkucy/arbitrum-mcp-tools/issues>
-* Documentation: <https://utkucy.gitbook.io/arbitrum-mcp-tools>
+* Documentation: <https://arbitrum-ai-hub.gitbook.io/docs>
 
 
 # Project Structure

@@ -3,9 +3,9 @@
 *Production-ready Rust smart contract implementations for Arbitrum Stylus - ERC20, ERC721, ERC1155, access control, proxy patterns, finance utilities, and cryptographic helpers.*
 
 ## Contents
-- Contracts (83 files)
-- Docs (38 files)
-- Examples (211 files)
+- Contracts
+- Docs
+- Examples
 
 ## File Index
 

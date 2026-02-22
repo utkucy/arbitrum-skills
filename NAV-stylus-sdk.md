@@ -3,11 +3,11 @@
 *Core Rust SDK for building Arbitrum Stylus contracts - storage abstractions, ABI encoding, proc macros, host I/O, testing framework, and cargo-stylus CLI tool.*
 
 ## Contents
-- Examples (181 files)
-- Stylus Core (6 files)
-- Stylus Proc (25 files)
-- Stylus Sdk (25 files)
-- Stylus Test (5 files)
+- Examples
+- Stylus Core
+- Stylus Proc
+- Stylus Sdk
+- Stylus Test
 
 ## File Index
 

@@ -1,6 +1,6 @@
 # Arbitrum Skills
 
-An LLM skill that provides AI assistants with comprehensive, up-to-date knowledge of the Arbitrum ecosystem. Instead of relying on training data that may be outdated or incomplete, this skill gives LLMs direct access to **926 files** covering official documentation, smart contract source code, and API references.
+An LLM skill that provides AI assistants with comprehensive, up-to-date knowledge of the Arbitrum ecosystem. Instead of relying on training data that may be outdated or incomplete, this skill gives LLMs direct access to official documentation, smart contract source code, and API references.
 
 ## What Is This?
 
@@ -39,29 +39,29 @@ cp -r arbitrum-skills ~/.claude/skills/
 
 ## What's Included
 
-### Documentation (203 files)
+### Documentation
 
 Parsed from the official [Arbitrum documentation](https://docs.arbitrum.io/):
 
-| Topic | Files | Covers |
-|-------|-------|--------|
-| Launch Arbitrum Chain | 70 | Orbit deployment, custom gas tokens, DAC setup, AnyTrust/Rollup |
-| For Devs | 29 | Chain IDs, RPC endpoints, dev frameworks, tools |
-| Build Decentralized Apps | 26 | Solidity/Stylus quickstart, cross-chain messaging, oracles, token bridging |
-| Run Arbitrum Node | 25 | Full node, archive, validator, sequencer, troubleshooting |
-| Stylus | 21 | WASM contracts in Rust, SDK, CLI tools, testing |
-| How Arbitrum Works | 20 | Nitro internals, BoLD, Timeboost, gas/fees, AnyTrust |
-| Other | 12 | Bridge, SDK, glossary, audit reports, notices |
+| Topic | Covers |
+|-------|--------|
+| Launch Arbitrum Chain | Orbit deployment, custom gas tokens, DAC setup, AnyTrust/Rollup |
+| For Devs | Chain IDs, RPC endpoints, dev frameworks, tools |
+| Build Decentralized Apps | Solidity/Stylus quickstart, cross-chain messaging, oracles, token bridging |
+| Run Arbitrum Node | Full node, archive, validator, sequencer, troubleshooting |
+| Stylus | WASM contracts in Rust, SDK, CLI tools, testing |
+| How Arbitrum Works | Nitro internals, BoLD, Timeboost, gas/fees, AnyTrust |
+| Other | Bridge, SDK, glossary, audit reports, notices |
 
-### Smart Contract Source Code (716 files)
+### Smart Contract Source Code
 
 Parsed from 3 official repositories:
 
-| Repository | Files | Content |
-|-----------|-------|---------|
-| [OpenZeppelin Stylus](https://github.com/OpenZeppelin/rust-contracts-stylus) | 332 | ERC-20/721/1155, access control, proxy patterns, finance utilities |
-| [Stylus SDK](https://github.com/OffchainLabs/stylus-sdk-rs) | 242 | Storage, ABI encoding, proc macros, host I/O, testing framework |
-| [Nitro Contracts](https://github.com/OffchainLabs/nitro-contracts) | 142 | Bridge (Inbox/Outbox), rollup management, BoLD challenge protocol |
+| Repository | Content |
+|-----------|---------|
+| [OpenZeppelin Stylus](https://github.com/OpenZeppelin/rust-contracts-stylus) | ERC-20/721/1155, access control, proxy patterns, finance utilities |
+| [Stylus SDK](https://github.com/OffchainLabs/stylus-sdk-rs) | Storage, ABI encoding, proc macros, host I/O, testing framework |
+| [Nitro Contracts](https://github.com/OffchainLabs/nitro-contracts) | Bridge (Inbox/Outbox), rollup management, BoLD challenge protocol |
 
 ### Navigation Structure
 
@@ -103,7 +103,7 @@ No build step required — the skill is just files.
 | **Arbitrum Skills** | This repo — the generated LLM skill | [GitHub](https://github.com/utkucy/arbitrum-skills) |
 | **Arbitrum Skill Generator** | CLI tool that generates this skill from source | [GitHub](https://github.com/utkucy/arbitrum-skill-generator) |
 | **Arbitrum MCP Tools** | MCP tools for blockchain operations (deploy, query, analyze) | [GitHub](https://github.com/utkucy/arbitrum-mcp-tools) |
-| **Documentation** | Full documentation for all projects | [GitBook](https://utkucy.gitbook.io/arbitrum-mcp-tools) |
+| **Documentation** | Full documentation for all projects | [GitBook](https://arbitrum-ai-hub.gitbook.io/docs) |
 
 ## License
 
