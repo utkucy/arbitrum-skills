@@ -1,0 +1,167 @@
+# How to run a full node for an Arbitrum chain
+
+:::info
+
+If you’re interested in accessing an Arbitrum chain but don’t want to set up your own node, see our [Node Providers](/build-decentralized-apps/reference/01-node-providers.mdx) to get RPC access to fully managed nodes hosted by a third-party provider.
+
+:::
+
+This how-to provides step-by-step instructions for running a full node for Arbitrum on your local machine.
+
+## Prerequisites
+
+In addition to the hardware requirements, the following prerequisites will be necessary when initially setting up your node. It is essential not to skip over these items. You would benefit by copying and pasting them into a notepad or text editor, as you will need to combine them with other commands and configuration/parameter options when you initially run your Arbitrum node.
+
+### Minimum hardware configuration
+
+The following are the minimum hardware requirements to set up a <a data-quicklook-from="arbitrum-nitro">Nitro</a> full node (not archival):
+
+| Resource     | Recommended                                                       |
+| :----------- | :---------------------------------------------------------------- |
+| RAM          | 64 GB                                                             |
+| CPU          | 8 core CPU (for AWS, a `i4i.2xlarge` instance)                    |
+| Storage type | NVMe SSD drives with locally attached drives strongly recommended |
+| Storage size | Depends on the chain and its traffic over time                    |
+
+Please note that:
+
+- The minimum requirements for RAM and CPU listed here are recommended for nodes that handle a limited number of RPC requests. For nodes that need to process multiple simultaneous requests, both the RAM size and the number of CPU cores should be increased to accommodate higher levels of traffic.
+- Single core performance is important. If the node is falling behind and a single core is 100% busy, the recommendation is to upgrade to a faster processor
+- The minimum storage requirements will change over time as the chain grows. Using more than the minimum requirements to run a robust full node is recommended.
+
+### Recommended Nitro version
+
+:::caution
+
+Although there are beta and release candidate versions of the Arbitrum Nitro software, use only the release version when running your node. Running beta or RC versions is not supported and might lead to unexpected behaviors and/or database corruption.
+
+:::
+
+Latest [Docker image](https://hub.docker.com/r/offchainlabs/nitro-node/tags): <code>@@latestNitroNodeImage=offchainlabs/nitro-node:v3.9.4-7f582c3@@</code>
+
+### Database snapshots
+
+::::info Snapshots availability
+
+Database snapshots are available and located in the [snapshot explorer](https://snapshot-explorer.arbitrum.io/) for Arbitrum One, Arbitrum Nova, and Arbitrum Sepolia. Database snapshots for other Arbitrum chains may be available at the discretion of the team running the chain. Please get in touch with them if you're interested in using a database snapshot for their chains.
+
+::::
+
+Supplying a database snapshot when starting your node for the first time is required for Arbitrum One (to provide information from the Classic era) but is optional for other chains. Supplying a database snapshot on the first run will provide the state and data for that chain up to a specific block, allowing the node to sync faster to the head of the chain.
+
+We provide a summary of the available parameters here, but we recommend reading the [complete guide](/run-arbitrum-node/nitro/03-nitro-database-snapshots.mdx) if you plan to use snapshots.
+
+- Use the parameter `--init.latest <snapshot type>` (accepted values: `archive`, `pruned`, `genesis`) to instruct your node to download the corresponding snapshot from the configured URL
+- Optionally, use the parameter `--init.latest-base` to set the base URL when searching for the latest snapshot
+- Note that these parameters get ignored if a database already exists
+- When running more than one node, it's easier to manually download the different parts of the snapshot, join them into a single archive, and host it locally for your nodes. Please see [Downloading the snapshot manually](/run-arbitrum-node/nitro/03-nitro-database-snapshots.mdx#downloading-the-snapshot-manually) for instructions on how to do that.
+
+:::warning Fusaka upgrade: Historical blobs
+
+If running a beacon node, historical data will now be in blobs. To make this transition to using historical blobs refer to the [Historical Blobs for Beacon Nodes](/run-arbitrum-node/beacon-nodes-historical-blobs.mdx) guide.
+
+:::
+
+### Required parameters
+
+The following list contains all the parameters needed to configure your node. Select the appropriate option depending on the chain you want to run your node for.
+
+<div className="dynamic-content-tabs">
+  
+      
+    
+    
+      
+    
+</div>
+
+## Putting it into practice: run a node
+
+:::warning Caution
+
+If you are running more than on node, you should [run a feed relay](/run-arbitrum-node/run-feed-relay.mdx).
+
+:::
+
+- To ensure the database persists across restarts, mount an external volume when running the Docker image. Use the mount point `/home/user/.arbitrum` within the Docker image.
+
+:::note Node config file
+
+If using a `node-config.json` file with Docker to mount, use the following command:
+
+```
+docker run --rm -it -v /Path/to/mount/arbitrum:/home/user/.arbitrum -v /Path/to/node-config.json:/home/user/.arbitrum/node-config.json -p 0.0.0.0:8450:8450  offchainlabs/nitro-node:v3.9.0-cca645a --conf.file /home/user/.arbitrum/node-config.json
+```
+
+:::
+
+- Here is an example of how to run `nitro-node`:
+
+<div className="dynamic-content-tabs">
+  
+      
+    
+    
+      
+    
+</div>
+
+- Note that it is important that `/some/local/dir/arbitrum` already exists; otherwise, the directory might be created with `root` as owner, and the Docker container won't be able to write to it.
+- Note that if you are running a node for the parent chain (e.g., Ethereum for Arbitrum One or Nova) on localhost, you may need to add `--network host` right after `docker run` to use Docker host-based networking
+- When shutting down the Docker image, it is important to allow a graceful shutdown to save the current state to disk. Here is an example of how to do a graceful shutdown of all Docker images currently running
+
+  ```shell
+  docker stop --time=1800 $(docker ps -aq)
+  ```
+
+### Important ports
+
+| Protocol          | Default port |
+| :---------------- | :----------- |
+| `RPC`/`http`      | `8547`       |
+| `RPC`/`websocket` | `8548`       |
+| `Sequencer Feed`  | `9642`       |
+
+- Please note: the `RPC`/`websocket` protocol requires some ports to be enabled, you can use the following flags:
+  - `--ws.port=8548`
+  - `--ws.addr=0.0.0.0`
+  - `--ws.origins=\*`
+
+### Note on permissions
+
+- The Docker image is configured to run as non-root UID 1000. This configuration means if you are running in Linux or OSX and you are getting permission errors when trying to run the Docker image, run this command to allow all users to update the persistent folders:
+
+  ```shell
+  mkdir /data/arbitrum
+  chmod -fR 777 /data/arbitrum
+  ```
+
+### Watchtower mode
+
+- By default, the full node runs in Watchtower mode, meaning that it watches the onchain assertions and, if it disagrees with them, logs an error containing the string `found incorrect assertion in watchtower mode`. For a BoLD-enabled chain like Arbitrum One or Arbitrum Nova if you are running Nitro before v3.6.0, the `--node.bold.enable=true` flag should be set to ensure your node can monitor for onchain assertions properly.
+- Setting this flag is not required as your node will continue to operate correctly, validate the Arbitrum One/Nova chain, and serve RPC requests as usual, regardless of this flag.
+- Note that watchtower mode adds a small amount of execution and memory overhead. You can deactivate this mode using the parameter `--node.staker.enable=false`.
+
+### Pruning
+
+- Pruning a full node refers to removing older, unnecessary data from the local copy of the blockchain that the node maintains, thereby saving disk space and slightly improving the node's efficiency. Pruning will remove all states from blocks older than the latest 128.
+- If you are using the default setting `--execution.caching.state-scheme=hash` then you can activate pruning by using the parameter:
+- `--init.prune <pruning mode>`
+  - `minimal`: Only genesis + latest head state is left, takes the least amount of time (several hours for Arbitrum One-sized database)
+  - `full` : Genesis + head state + state for latest confirmed block (will take a long time ~50 hours or more)
+  - `validator`: All of above + state of latest validated block (will take a little less than twice what `full` will take)
+
+:::note
+
+This process occurs when the node starts and will not serve RPC requests during pruning.
+
+:::
+
+### Transaction prechecker
+
+- Enabling the transaction prechecker will add extra checks before your node forwards `eth_sendRawTransaction` to the Sequencer endpoint.
+- Below, we list the flags to set up the prechecker:
+
+### Optional parameters
+
+Below, we listed the most commonly used parameters when running a node. You can also use the flag `--help` for a comprehensive list of the available parameters.

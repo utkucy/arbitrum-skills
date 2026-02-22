@@ -1,0 +1,524 @@
+# OpenZeppelin Rust Contracts for Stylus
+
+*Production-ready Rust smart contract implementations for Arbitrum Stylus - ERC20, ERC721, ERC1155, access control, proxy patterns, finance utilities, and cryptographic helpers.*
+
+## Contents
+- Contracts (83 files)
+- Docs (38 files)
+- Examples (211 files)
+
+## File Index
+
+- **Contracts/**
+  - **Src/**
+    - [access](smart-contracts/openzeppelin-stylus/contracts/src/lib.md)
+    - **Access/**
+      - [control](smart-contracts/openzeppelin-stylus/contracts/src/access/mod.md)
+      - [Error](smart-contracts/openzeppelin-stylus/contracts/src/access/ownable.md)
+      - [Ownable2Step](smart-contracts/openzeppelin-stylus/contracts/src/access/ownable_two_step.md)
+      - **Control/**
+        - [extensions](smart-contracts/openzeppelin-stylus/contracts/src/access/control/mod.md)
+        - **Extensions/**
+          - [enumerable](smart-contracts/openzeppelin-stylus/contracts/src/access/control/extensions/mod.md)
+          - [Error](smart-contracts/openzeppelin-stylus/contracts/src/access/control/extensions/enumerable.md)
+    - **Finance/**
+      - [Error](smart-contracts/openzeppelin-stylus/contracts/src/finance/vesting_wallet.md)
+      - [vesting_wallet](smart-contracts/openzeppelin-stylus/contracts/src/finance/mod.md)
+    - **Proxy/**
+      - [abi](smart-contracts/openzeppelin-stylus/contracts/src/proxy/mod.md)
+      - [Abi](smart-contracts/openzeppelin-stylus/contracts/src/proxy/abi.md)
+      - **Beacon/**
+        - [BeaconProxy](smart-contracts/openzeppelin-stylus/contracts/src/proxy/beacon/proxy.md)
+        - [Error](smart-contracts/openzeppelin-stylus/contracts/src/proxy/beacon/upgradeable.md)
+        - [proxy](smart-contracts/openzeppelin-stylus/contracts/src/proxy/beacon/mod.md)
+      - **Erc1967/**
+        - [Error](smart-contracts/openzeppelin-stylus/contracts/src/proxy/erc1967/utils.md)
+        - [utils](smart-contracts/openzeppelin-stylus/contracts/src/proxy/erc1967/mod.md)
+      - **Utils/**
+        - [erc1822](smart-contracts/openzeppelin-stylus/contracts/src/proxy/utils/mod.md)
+        - [Error](smart-contracts/openzeppelin-stylus/contracts/src/proxy/utils/uups_upgradeable.md)
+        - [IErc1822Proxiable](smart-contracts/openzeppelin-stylus/contracts/src/proxy/utils/erc1822.md)
+    - **Token/**
+      - [common](smart-contracts/openzeppelin-stylus/contracts/src/token/mod.md)
+      - **Common/**
+        - [erc2981](smart-contracts/openzeppelin-stylus/contracts/src/token/common/mod.md)
+        - [Error](smart-contracts/openzeppelin-stylus/contracts/src/token/common/erc2981.md)
+      - **Erc1155/**
+        - [abi](smart-contracts/openzeppelin-stylus/contracts/src/token/erc1155/mod.md)
+        - [Abi](smart-contracts/openzeppelin-stylus/contracts/src/token/erc1155/abi.md)
+        - [IErc1155Receiver](smart-contracts/openzeppelin-stylus/contracts/src/token/erc1155/receiver.md)
+        - **Extensions/**
+          - [burnable](smart-contracts/openzeppelin-stylus/contracts/src/token/erc1155/extensions/mod.md)
+          - [Erc1155MetadataUri](smart-contracts/openzeppelin-stylus/contracts/src/token/erc1155/extensions/metadata_uri.md)
+          - [Erc1155Supply](smart-contracts/openzeppelin-stylus/contracts/src/token/erc1155/extensions/supply.md)
+          - [Erc1155UriStorage](smart-contracts/openzeppelin-stylus/contracts/src/token/erc1155/extensions/uri_storage.md)
+          - [IErc1155Burnable](smart-contracts/openzeppelin-stylus/contracts/src/token/erc1155/extensions/burnable.md)
+        - **Utils/**
+          - [Erc1155Holder](smart-contracts/openzeppelin-stylus/contracts/src/token/erc1155/utils/holder.md)
+          - [Mod](smart-contracts/openzeppelin-stylus/contracts/src/token/erc1155/utils/mod.md)
+      - **Erc20/**
+        - [abi](smart-contracts/openzeppelin-stylus/contracts/src/token/erc20/mod.md)
+        - [Abi](smart-contracts/openzeppelin-stylus/contracts/src/token/erc20/abi.md)
+        - **Extensions/**
+          - [burnable](smart-contracts/openzeppelin-stylus/contracts/src/token/erc20/extensions/mod.md)
+          - [Erc20Metadata](smart-contracts/openzeppelin-stylus/contracts/src/token/erc20/extensions/metadata.md)
+          - [Error](smart-contracts/openzeppelin-stylus/contracts/src/token/erc20/extensions/capped.md)
+          - [Error](smart-contracts/openzeppelin-stylus/contracts/src/token/erc20/extensions/erc4626.md)
+          - [Error](smart-contracts/openzeppelin-stylus/contracts/src/token/erc20/extensions/flash_mint.md)
+          - [Error](smart-contracts/openzeppelin-stylus/contracts/src/token/erc20/extensions/permit.md)
+          - [Error](smart-contracts/openzeppelin-stylus/contracts/src/token/erc20/extensions/wrapper.md)
+          - [IErc20Burnable](smart-contracts/openzeppelin-stylus/contracts/src/token/erc20/extensions/burnable.md)
+        - **Utils/**
+          - [Error](smart-contracts/openzeppelin-stylus/contracts/src/token/erc20/utils/safe_erc20.md)
+          - [safe_erc20](smart-contracts/openzeppelin-stylus/contracts/src/token/erc20/utils/mod.md)
+      - **Erc6909/**
+        - [extensions](smart-contracts/openzeppelin-stylus/contracts/src/token/erc6909/mod.md)
+        - **Extensions/**
+          - [Erc6909TokenSupply](smart-contracts/openzeppelin-stylus/contracts/src/token/erc6909/extensions/token_supply.md)
+          - [token_supply](smart-contracts/openzeppelin-stylus/contracts/src/token/erc6909/extensions/mod.md)
+      - **Erc721/**
+        - [abi](smart-contracts/openzeppelin-stylus/contracts/src/token/erc721/mod.md)
+        - [Abi](smart-contracts/openzeppelin-stylus/contracts/src/token/erc721/abi.md)
+        - [IErc721Receiver](smart-contracts/openzeppelin-stylus/contracts/src/token/erc721/receiver.md)
+        - **Extensions/**
+          - [burnable](smart-contracts/openzeppelin-stylus/contracts/src/token/erc721/extensions/mod.md)
+          - [Erc721Metadata](smart-contracts/openzeppelin-stylus/contracts/src/token/erc721/extensions/metadata.md)
+          - [Erc721UriStorage](smart-contracts/openzeppelin-stylus/contracts/src/token/erc721/extensions/uri_storage.md)
+          - [Error](smart-contracts/openzeppelin-stylus/contracts/src/token/erc721/extensions/consecutive.md)
+          - [Error](smart-contracts/openzeppelin-stylus/contracts/src/token/erc721/extensions/enumerable.md)
+          - [Error](smart-contracts/openzeppelin-stylus/contracts/src/token/erc721/extensions/wrapper.md)
+          - [IErc721Burnable](smart-contracts/openzeppelin-stylus/contracts/src/token/erc721/extensions/burnable.md)
+        - **Utils/**
+          - [Erc721Holder](smart-contracts/openzeppelin-stylus/contracts/src/token/erc721/utils/holder.md)
+          - [Mod](smart-contracts/openzeppelin-stylus/contracts/src/token/erc721/utils/mod.md)
+    - **Utils/**
+      - [address](smart-contracts/openzeppelin-stylus/contracts/src/utils/mod.md)
+      - [Erc1967](smart-contracts/openzeppelin-stylus/contracts/src/utils/storage_slot.md)
+      - [Error](smart-contracts/openzeppelin-stylus/contracts/src/utils/address.md)
+      - [Error](smart-contracts/openzeppelin-stylus/contracts/src/utils/nonces.md)
+      - [Error](smart-contracts/openzeppelin-stylus/contracts/src/utils/pausable.md)
+      - [Metadata](smart-contracts/openzeppelin-stylus/contracts/src/utils/metadata.md)
+      - **Cryptography/**
+        - [ecdsa](smart-contracts/openzeppelin-stylus/contracts/src/utils/cryptography/mod.md)
+        - [Error](smart-contracts/openzeppelin-stylus/contracts/src/utils/cryptography/ecdsa.md)
+        - [IEip712](smart-contracts/openzeppelin-stylus/contracts/src/utils/cryptography/eip712.md)
+      - **Introspection/**
+        - [erc165](smart-contracts/openzeppelin-stylus/contracts/src/utils/introspection/mod.md)
+        - [IErc165](smart-contracts/openzeppelin-stylus/contracts/src/utils/introspection/erc165.md)
+      - **Math/**
+        - [alloy](smart-contracts/openzeppelin-stylus/contracts/src/utils/math/mod.md)
+        - [Math](smart-contracts/openzeppelin-stylus/contracts/src/utils/math/alloy.md)
+        - **Storage/**
+          - [Checked](smart-contracts/openzeppelin-stylus/contracts/src/utils/math/storage/checked.md)
+          - [Mod](smart-contracts/openzeppelin-stylus/contracts/src/utils/math/storage/mod.md)
+          - [Unchecked](smart-contracts/openzeppelin-stylus/contracts/src/utils/math/storage/unchecked.md)
+      - **Precompiles/**
+        - [P256 Verify](smart-contracts/openzeppelin-stylus/contracts/src/utils/precompiles/p256_verify.md)
+        - [primitives](smart-contracts/openzeppelin-stylus/contracts/src/utils/precompiles/mod.md)
+      - **Structs/**
+        - [bitmap](smart-contracts/openzeppelin-stylus/contracts/src/utils/structs/mod.md)
+        - [BitMap](smart-contracts/openzeppelin-stylus/contracts/src/utils/structs/bitmap.md)
+        - **Checkpoints/**
+          - [generic_size](smart-contracts/openzeppelin-stylus/contracts/src/utils/structs/checkpoints/mod.md)
+          - [Size](smart-contracts/openzeppelin-stylus/contracts/src/utils/structs/checkpoints/generic_size.md)
+        - **Enumerable_set/**
+          - [element](smart-contracts/openzeppelin-stylus/contracts/src/utils/structs/enumerable_set/mod.md)
+          - [Element](smart-contracts/openzeppelin-stylus/contracts/src/utils/structs/enumerable_set/element.md)
+- **Docs/**
+  - **Modules/**
+    - **ROOT/**
+      - **Pages/**
+        - [Access Control](smart-contracts/openzeppelin-stylus/docs/modules/ROOT/pages/access-control.md)
+        - [Beacon Proxy](smart-contracts/openzeppelin-stylus/docs/modules/ROOT/pages/beacon-proxy.md)
+        - [Common (Tokens)](smart-contracts/openzeppelin-stylus/docs/modules/ROOT/pages/common.md)
+        - [Crypto](smart-contracts/openzeppelin-stylus/docs/modules/ROOT/pages/crypto.md)
+        - [ERC-1155](smart-contracts/openzeppelin-stylus/docs/modules/ROOT/pages/erc1155.md)
+        - [ERC-1155 Burnable](smart-contracts/openzeppelin-stylus/docs/modules/ROOT/pages/erc1155-burnable.md)
+        - [ERC-1155 Metadata URI](smart-contracts/openzeppelin-stylus/docs/modules/ROOT/pages/erc1155-metadata-uri.md)
+        - [ERC-1155 Pausable](smart-contracts/openzeppelin-stylus/docs/modules/ROOT/pages/erc1155-pausable.md)
+        - [ERC-1155 Supply](smart-contracts/openzeppelin-stylus/docs/modules/ROOT/pages/erc1155-supply.md)
+        - [ERC-1155 URI Storage](smart-contracts/openzeppelin-stylus/docs/modules/ROOT/pages/erc1155-uri-storage.md)
+        - [ERC-1967 Proxy](smart-contracts/openzeppelin-stylus/docs/modules/ROOT/pages/erc1967.md)
+        - [ERC-20](smart-contracts/openzeppelin-stylus/docs/modules/ROOT/pages/erc20.md)
+        - [ERC-20 Burnable](smart-contracts/openzeppelin-stylus/docs/modules/ROOT/pages/erc20-burnable.md)
+        - [ERC-20 Capped](smart-contracts/openzeppelin-stylus/docs/modules/ROOT/pages/erc20-capped.md)
+        - [ERC-20 Flash Mint](smart-contracts/openzeppelin-stylus/docs/modules/ROOT/pages/erc20-flash-mint.md)
+        - [ERC-20 Metadata](smart-contracts/openzeppelin-stylus/docs/modules/ROOT/pages/erc20-metadata.md)
+        - [ERC-20 Pausable](smart-contracts/openzeppelin-stylus/docs/modules/ROOT/pages/erc20-pausable.md)
+        - [ERC-20 Permit](smart-contracts/openzeppelin-stylus/docs/modules/ROOT/pages/erc20-permit.md)
+        - [ERC-20 Wrapper](smart-contracts/openzeppelin-stylus/docs/modules/ROOT/pages/erc20-wrapper.md)
+        - [ERC-2981](smart-contracts/openzeppelin-stylus/docs/modules/ROOT/pages/erc2981.md)
+        - [ERC-4626](smart-contracts/openzeppelin-stylus/docs/modules/ROOT/pages/erc4626.md)
+        - [ERC-6909](smart-contracts/openzeppelin-stylus/docs/modules/ROOT/pages/erc6909.md)
+        - [ERC-6909 Supply](smart-contracts/openzeppelin-stylus/docs/modules/ROOT/pages/erc6909-supply.md)
+        - [ERC-721](smart-contracts/openzeppelin-stylus/docs/modules/ROOT/pages/erc721.md)
+        - [ERC-721 Burnable](smart-contracts/openzeppelin-stylus/docs/modules/ROOT/pages/erc721-burnable.md)
+        - [ERC-721 Consecutive](smart-contracts/openzeppelin-stylus/docs/modules/ROOT/pages/erc721-consecutive.md)
+        - [ERC-721 Enumerable](smart-contracts/openzeppelin-stylus/docs/modules/ROOT/pages/erc721-enumerable.md)
+        - [ERC-721 Metadata](smart-contracts/openzeppelin-stylus/docs/modules/ROOT/pages/erc721-metadata.md)
+        - [ERC-721 Pausable](smart-contracts/openzeppelin-stylus/docs/modules/ROOT/pages/erc721-pausable.md)
+        - [ERC-721 Uri Storage](smart-contracts/openzeppelin-stylus/docs/modules/ROOT/pages/erc721-uri-storage.md)
+        - [ERC-721 Wrapper](smart-contracts/openzeppelin-stylus/docs/modules/ROOT/pages/erc721-wrapper.md)
+        - [Finance](smart-contracts/openzeppelin-stylus/docs/modules/ROOT/pages/finance.md)
+        - [OpenZeppelin Contracts for Stylus](smart-contracts/openzeppelin-stylus/docs/modules/ROOT/pages/index.md)
+        - [Proxy Patterns](smart-contracts/openzeppelin-stylus/docs/modules/ROOT/pages/proxy.md)
+        - [Tokens](smart-contracts/openzeppelin-stylus/docs/modules/ROOT/pages/tokens.md)
+        - [Utilities](smart-contracts/openzeppelin-stylus/docs/modules/ROOT/pages/utilities.md)
+        - [UUPS Proxy](smart-contracts/openzeppelin-stylus/docs/modules/ROOT/pages/uups-proxy.md)
+        - [VestingWallet](smart-contracts/openzeppelin-stylus/docs/modules/ROOT/pages/vesting-wallet.md)
+- **Examples/**
+  - **Access Control/**
+    - [Cargo](smart-contracts/openzeppelin-stylus/examples/access-control/Cargo.md)
+    - **Src/**
+      - [Lib](smart-contracts/openzeppelin-stylus/examples/access-control/src/lib.md)
+      - [Main](smart-contracts/openzeppelin-stylus/examples/access-control/src/main.md)
+    - **Tests/**
+      - [Access Control](smart-contracts/openzeppelin-stylus/examples/access-control/tests/access_control.md)
+      - **Abi/**
+        - [Mod](smart-contracts/openzeppelin-stylus/examples/access-control/tests/abi/mod.md)
+  - **Basic/**
+    - **Script/**
+      - [Cargo](smart-contracts/openzeppelin-stylus/examples/basic/script/Cargo.md)
+      - **Src/**
+        - [Main](smart-contracts/openzeppelin-stylus/examples/basic/script/src/main.md)
+    - **Token/**
+      - [Cargo](smart-contracts/openzeppelin-stylus/examples/basic/token/Cargo.md)
+      - **Src/**
+        - [Lib](smart-contracts/openzeppelin-stylus/examples/basic/token/src/lib.md)
+        - [Main](smart-contracts/openzeppelin-stylus/examples/basic/token/src/main.md)
+  - **Beacon Proxy/**
+    - [Cargo](smart-contracts/openzeppelin-stylus/examples/beacon-proxy/Cargo.md)
+    - **Src/**
+      - [Lib](smart-contracts/openzeppelin-stylus/examples/beacon-proxy/src/lib.md)
+      - [Main](smart-contracts/openzeppelin-stylus/examples/beacon-proxy/src/main.md)
+    - **Tests/**
+      - [Beacon Proxy](smart-contracts/openzeppelin-stylus/examples/beacon-proxy/tests/beacon-proxy.md)
+      - **Abi/**
+        - [Mod](smart-contracts/openzeppelin-stylus/examples/beacon-proxy/tests/abi/mod.md)
+      - **Mock/**
+        - [erc20](smart-contracts/openzeppelin-stylus/examples/beacon-proxy/tests/mock/mod.md)
+        - [Erc20](smart-contracts/openzeppelin-stylus/examples/beacon-proxy/tests/mock/erc20.md)
+  - **Eddsa/**
+    - [Cargo](smart-contracts/openzeppelin-stylus/examples/eddsa/Cargo.md)
+    - **Src/**
+      - [Lib](smart-contracts/openzeppelin-stylus/examples/eddsa/src/lib.md)
+      - [Main](smart-contracts/openzeppelin-stylus/examples/eddsa/src/main.md)
+    - **Tests/**
+      - [Eddsa](smart-contracts/openzeppelin-stylus/examples/eddsa/tests/eddsa.md)
+      - **Abi/**
+        - [Mod](smart-contracts/openzeppelin-stylus/examples/eddsa/tests/abi/mod.md)
+  - **Erc1155/**
+    - [Cargo](smart-contracts/openzeppelin-stylus/examples/erc1155/Cargo.md)
+    - **Src/**
+      - [Lib](smart-contracts/openzeppelin-stylus/examples/erc1155/src/lib.md)
+      - [Main](smart-contracts/openzeppelin-stylus/examples/erc1155/src/main.md)
+    - **Tests/**
+      - [Erc1155](smart-contracts/openzeppelin-stylus/examples/erc1155/tests/erc1155.md)
+      - **Abi/**
+        - [Mod](smart-contracts/openzeppelin-stylus/examples/erc1155/tests/abi/mod.md)
+      - **Mock/**
+        - [receiver](smart-contracts/openzeppelin-stylus/examples/erc1155/tests/mock/mod.md)
+        - [Receiver](smart-contracts/openzeppelin-stylus/examples/erc1155/tests/mock/receiver.md)
+  - **Erc1155 Holder/**
+    - [Cargo](smart-contracts/openzeppelin-stylus/examples/erc1155-holder/Cargo.md)
+    - **Src/**
+      - [Lib](smart-contracts/openzeppelin-stylus/examples/erc1155-holder/src/lib.md)
+      - [Main](smart-contracts/openzeppelin-stylus/examples/erc1155-holder/src/main.md)
+    - **Tests/**
+      - [Erc1155 Holder](smart-contracts/openzeppelin-stylus/examples/erc1155-holder/tests/erc1155-holder.md)
+      - **Abi/**
+        - [Mod](smart-contracts/openzeppelin-stylus/examples/erc1155-holder/tests/abi/mod.md)
+  - **Erc1155 Metadata Uri/**
+    - [Cargo](smart-contracts/openzeppelin-stylus/examples/erc1155-metadata-uri/Cargo.md)
+    - **Src/**
+      - [Lib](smart-contracts/openzeppelin-stylus/examples/erc1155-metadata-uri/src/lib.md)
+      - [Main](smart-contracts/openzeppelin-stylus/examples/erc1155-metadata-uri/src/main.md)
+    - **Tests/**
+      - [Erc1155 Metadata Uri](smart-contracts/openzeppelin-stylus/examples/erc1155-metadata-uri/tests/erc1155-metadata-uri.md)
+      - **Abi/**
+        - [Mod](smart-contracts/openzeppelin-stylus/examples/erc1155-metadata-uri/tests/abi/mod.md)
+  - **Erc1155 Supply/**
+    - [Cargo](smart-contracts/openzeppelin-stylus/examples/erc1155-supply/Cargo.md)
+    - **Src/**
+      - [Lib](smart-contracts/openzeppelin-stylus/examples/erc1155-supply/src/lib.md)
+      - [Main](smart-contracts/openzeppelin-stylus/examples/erc1155-supply/src/main.md)
+    - **Tests/**
+      - [Erc1155 Supply](smart-contracts/openzeppelin-stylus/examples/erc1155-supply/tests/erc1155-supply.md)
+      - **Abi/**
+        - [Mod](smart-contracts/openzeppelin-stylus/examples/erc1155-supply/tests/abi/mod.md)
+      - **Mock/**
+        - [receiver](smart-contracts/openzeppelin-stylus/examples/erc1155-supply/tests/mock/mod.md)
+        - [Receiver](smart-contracts/openzeppelin-stylus/examples/erc1155-supply/tests/mock/receiver.md)
+  - **Erc1967/**
+    - [Cargo](smart-contracts/openzeppelin-stylus/examples/erc1967/Cargo.md)
+    - **Src/**
+      - [Lib](smart-contracts/openzeppelin-stylus/examples/erc1967/src/lib.md)
+      - [Main](smart-contracts/openzeppelin-stylus/examples/erc1967/src/main.md)
+    - **Tests/**
+      - [Erc1967](smart-contracts/openzeppelin-stylus/examples/erc1967/tests/erc1967.md)
+      - **Abi/**
+        - [Mod](smart-contracts/openzeppelin-stylus/examples/erc1967/tests/abi/mod.md)
+      - **Mock/**
+        - [erc20](smart-contracts/openzeppelin-stylus/examples/erc1967/tests/mock/mod.md)
+        - [Erc20](smart-contracts/openzeppelin-stylus/examples/erc1967/tests/mock/erc20.md)
+  - **Erc1967 Invalid/**
+    - [Cargo](smart-contracts/openzeppelin-stylus/examples/erc1967-invalid/Cargo.md)
+    - **Src/**
+      - [Lib](smart-contracts/openzeppelin-stylus/examples/erc1967-invalid/src/lib.md)
+      - [Main](smart-contracts/openzeppelin-stylus/examples/erc1967-invalid/src/main.md)
+  - **Erc20/**
+    - [Cargo](smart-contracts/openzeppelin-stylus/examples/erc20/Cargo.md)
+    - **Src/**
+      - [Lib](smart-contracts/openzeppelin-stylus/examples/erc20/src/lib.md)
+      - [Main](smart-contracts/openzeppelin-stylus/examples/erc20/src/main.md)
+    - **Tests/**
+      - [Erc20](smart-contracts/openzeppelin-stylus/examples/erc20/tests/erc20.md)
+      - **Abi/**
+        - [Mod](smart-contracts/openzeppelin-stylus/examples/erc20/tests/abi/mod.md)
+  - **Erc20 Flash Mint/**
+    - [Cargo](smart-contracts/openzeppelin-stylus/examples/erc20-flash-mint/Cargo.md)
+    - **Src/**
+      - [Lib](smart-contracts/openzeppelin-stylus/examples/erc20-flash-mint/src/lib.md)
+      - [Main](smart-contracts/openzeppelin-stylus/examples/erc20-flash-mint/src/main.md)
+    - **Tests/**
+      - [Erc20 Flash Mint](smart-contracts/openzeppelin-stylus/examples/erc20-flash-mint/tests/erc20_flash_mint.md)
+      - **Abi/**
+        - [Mod](smart-contracts/openzeppelin-stylus/examples/erc20-flash-mint/tests/abi/mod.md)
+      - **Mock/**
+        - [borrower](smart-contracts/openzeppelin-stylus/examples/erc20-flash-mint/tests/mock/mod.md)
+        - [Borrower](smart-contracts/openzeppelin-stylus/examples/erc20-flash-mint/tests/mock/borrower.md)
+  - **Erc20 Permit/**
+    - [Cargo](smart-contracts/openzeppelin-stylus/examples/erc20-permit/Cargo.md)
+    - **Src/**
+      - [Lib](smart-contracts/openzeppelin-stylus/examples/erc20-permit/src/lib.md)
+      - [Main](smart-contracts/openzeppelin-stylus/examples/erc20-permit/src/main.md)
+    - **Tests/**
+      - [Erc20 Permit](smart-contracts/openzeppelin-stylus/examples/erc20-permit/tests/erc20_permit.md)
+      - **Abi/**
+        - [Mod](smart-contracts/openzeppelin-stylus/examples/erc20-permit/tests/abi/mod.md)
+  - **Erc20 Wrapper/**
+    - [Cargo](smart-contracts/openzeppelin-stylus/examples/erc20-wrapper/Cargo.md)
+    - **Src/**
+      - [Lib](smart-contracts/openzeppelin-stylus/examples/erc20-wrapper/src/lib.md)
+      - [Main](smart-contracts/openzeppelin-stylus/examples/erc20-wrapper/src/main.md)
+    - **Tests/**
+      - [Erc20 Wrapper](smart-contracts/openzeppelin-stylus/examples/erc20-wrapper/tests/erc20_wrapper.md)
+      - **Abi/**
+        - [Mod](smart-contracts/openzeppelin-stylus/examples/erc20-wrapper/tests/abi/mod.md)
+      - **Mock/**
+        - [erc20](smart-contracts/openzeppelin-stylus/examples/erc20-wrapper/tests/mock/mod.md)
+        - [Erc20](smart-contracts/openzeppelin-stylus/examples/erc20-wrapper/tests/mock/erc20.md)
+  - **Erc4626/**
+    - [Cargo](smart-contracts/openzeppelin-stylus/examples/erc4626/Cargo.md)
+    - **Src/**
+      - [Lib](smart-contracts/openzeppelin-stylus/examples/erc4626/src/lib.md)
+      - [Main](smart-contracts/openzeppelin-stylus/examples/erc4626/src/main.md)
+    - **Tests/**
+      - [Erc4626](smart-contracts/openzeppelin-stylus/examples/erc4626/tests/erc4626.md)
+      - **Abi/**
+        - [Mod](smart-contracts/openzeppelin-stylus/examples/erc4626/tests/abi/mod.md)
+      - **Mock/**
+        - [erc20](smart-contracts/openzeppelin-stylus/examples/erc4626/tests/mock/mod.md)
+        - [Erc20](smart-contracts/openzeppelin-stylus/examples/erc4626/tests/mock/erc20.md)
+        - [Erc20 Failing Transfer](smart-contracts/openzeppelin-stylus/examples/erc4626/tests/mock/erc20_failing_transfer.md)
+  - **Erc6909/**
+    - [Cargo](smart-contracts/openzeppelin-stylus/examples/erc6909/Cargo.md)
+    - **Src/**
+      - [Lib](smart-contracts/openzeppelin-stylus/examples/erc6909/src/lib.md)
+      - [Main](smart-contracts/openzeppelin-stylus/examples/erc6909/src/main.md)
+    - **Tests/**
+      - [Erc6909](smart-contracts/openzeppelin-stylus/examples/erc6909/tests/erc6909.md)
+      - **Abi/**
+        - [Mod](smart-contracts/openzeppelin-stylus/examples/erc6909/tests/abi/mod.md)
+  - **Erc6909 Supply/**
+    - [Cargo](smart-contracts/openzeppelin-stylus/examples/erc6909-supply/Cargo.md)
+    - **Src/**
+      - [Lib](smart-contracts/openzeppelin-stylus/examples/erc6909-supply/src/lib.md)
+      - [Main](smart-contracts/openzeppelin-stylus/examples/erc6909-supply/src/main.md)
+    - **Tests/**
+      - [Erc6909 Supply](smart-contracts/openzeppelin-stylus/examples/erc6909-supply/tests/erc6909-supply.md)
+      - **Abi/**
+        - [Mod](smart-contracts/openzeppelin-stylus/examples/erc6909-supply/tests/abi/mod.md)
+  - **Erc721/**
+    - [Cargo](smart-contracts/openzeppelin-stylus/examples/erc721/Cargo.md)
+    - **Src/**
+      - [Lib](smart-contracts/openzeppelin-stylus/examples/erc721/src/lib.md)
+      - [Main](smart-contracts/openzeppelin-stylus/examples/erc721/src/main.md)
+    - **Tests/**
+      - [Erc721](smart-contracts/openzeppelin-stylus/examples/erc721/tests/erc721.md)
+      - **Abi/**
+        - [Mod](smart-contracts/openzeppelin-stylus/examples/erc721/tests/abi/mod.md)
+      - **Mock/**
+        - [receiver](smart-contracts/openzeppelin-stylus/examples/erc721/tests/mock/mod.md)
+        - [Receiver](smart-contracts/openzeppelin-stylus/examples/erc721/tests/mock/receiver.md)
+  - **Erc721 Consecutive/**
+    - [Cargo](smart-contracts/openzeppelin-stylus/examples/erc721-consecutive/Cargo.md)
+    - **Src/**
+      - [Lib](smart-contracts/openzeppelin-stylus/examples/erc721-consecutive/src/lib.md)
+      - [Main](smart-contracts/openzeppelin-stylus/examples/erc721-consecutive/src/main.md)
+    - **Tests/**
+      - [Erc721 Consecutive](smart-contracts/openzeppelin-stylus/examples/erc721-consecutive/tests/erc721_consecutive.md)
+      - **Abi/**
+        - [Mod](smart-contracts/openzeppelin-stylus/examples/erc721-consecutive/tests/abi/mod.md)
+  - **Erc721 Holder/**
+    - [Cargo](smart-contracts/openzeppelin-stylus/examples/erc721-holder/Cargo.md)
+    - **Src/**
+      - [Lib](smart-contracts/openzeppelin-stylus/examples/erc721-holder/src/lib.md)
+      - [Main](smart-contracts/openzeppelin-stylus/examples/erc721-holder/src/main.md)
+    - **Tests/**
+      - [Erc721 Holder](smart-contracts/openzeppelin-stylus/examples/erc721-holder/tests/erc721-holder.md)
+      - **Abi/**
+        - [Mod](smart-contracts/openzeppelin-stylus/examples/erc721-holder/tests/abi/mod.md)
+  - **Erc721 Metadata/**
+    - [Cargo](smart-contracts/openzeppelin-stylus/examples/erc721-metadata/Cargo.md)
+    - **Src/**
+      - [Lib](smart-contracts/openzeppelin-stylus/examples/erc721-metadata/src/lib.md)
+      - [Main](smart-contracts/openzeppelin-stylus/examples/erc721-metadata/src/main.md)
+    - **Tests/**
+      - [Erc721 Metadata](smart-contracts/openzeppelin-stylus/examples/erc721-metadata/tests/erc721_metadata.md)
+      - **Abi/**
+        - [Mod](smart-contracts/openzeppelin-stylus/examples/erc721-metadata/tests/abi/mod.md)
+  - **Erc721 Wrapper/**
+    - [Cargo](smart-contracts/openzeppelin-stylus/examples/erc721-wrapper/Cargo.md)
+    - **Src/**
+      - [Lib](smart-contracts/openzeppelin-stylus/examples/erc721-wrapper/src/lib.md)
+      - [Main](smart-contracts/openzeppelin-stylus/examples/erc721-wrapper/src/main.md)
+    - **Tests/**
+      - [Erc721 Wrapper](smart-contracts/openzeppelin-stylus/examples/erc721-wrapper/tests/erc721_wrapper.md)
+      - **Abi/**
+        - [Mod](smart-contracts/openzeppelin-stylus/examples/erc721-wrapper/tests/abi/mod.md)
+      - **Mock/**
+        - [erc721](smart-contracts/openzeppelin-stylus/examples/erc721-wrapper/tests/mock/mod.md)
+        - [Erc721](smart-contracts/openzeppelin-stylus/examples/erc721-wrapper/tests/mock/erc721.md)
+  - **Merkle Proofs/**
+    - [Cargo](smart-contracts/openzeppelin-stylus/examples/merkle-proofs/Cargo.md)
+    - **Src/**
+      - [Lib](smart-contracts/openzeppelin-stylus/examples/merkle-proofs/src/lib.md)
+      - [Main](smart-contracts/openzeppelin-stylus/examples/merkle-proofs/src/main.md)
+  - **Ownable/**
+    - [Cargo](smart-contracts/openzeppelin-stylus/examples/ownable/Cargo.md)
+    - **Src/**
+      - [Lib](smart-contracts/openzeppelin-stylus/examples/ownable/src/lib.md)
+      - [Main](smart-contracts/openzeppelin-stylus/examples/ownable/src/main.md)
+    - **Tests/**
+      - [Ownable](smart-contracts/openzeppelin-stylus/examples/ownable/tests/ownable.md)
+      - **Abi/**
+        - [Mod](smart-contracts/openzeppelin-stylus/examples/ownable/tests/abi/mod.md)
+  - **Ownable Two Step/**
+    - [Cargo](smart-contracts/openzeppelin-stylus/examples/ownable-two-step/Cargo.md)
+    - **Src/**
+      - [Lib](smart-contracts/openzeppelin-stylus/examples/ownable-two-step/src/lib.md)
+      - [Main](smart-contracts/openzeppelin-stylus/examples/ownable-two-step/src/main.md)
+    - **Tests/**
+      - [Ownable Two Step](smart-contracts/openzeppelin-stylus/examples/ownable-two-step/tests/ownable_two_step.md)
+      - **Abi/**
+        - [Mod](smart-contracts/openzeppelin-stylus/examples/ownable-two-step/tests/abi/mod.md)
+  - **Pedersen/**
+    - [Cargo](smart-contracts/openzeppelin-stylus/examples/pedersen/Cargo.md)
+    - **Src/**
+      - [Lib](smart-contracts/openzeppelin-stylus/examples/pedersen/src/lib.md)
+      - [Main](smart-contracts/openzeppelin-stylus/examples/pedersen/src/main.md)
+    - **Tests/**
+      - [Pedersen](smart-contracts/openzeppelin-stylus/examples/pedersen/tests/pedersen.md)
+      - **Abi/**
+        - [Mod](smart-contracts/openzeppelin-stylus/examples/pedersen/tests/abi/mod.md)
+  - **Poseidon/**
+    - [Cargo](smart-contracts/openzeppelin-stylus/examples/poseidon/Cargo.md)
+    - **Src/**
+      - [Lib](smart-contracts/openzeppelin-stylus/examples/poseidon/src/lib.md)
+      - [Main](smart-contracts/openzeppelin-stylus/examples/poseidon/src/main.md)
+    - **Tests/**
+      - [Poseidon](smart-contracts/openzeppelin-stylus/examples/poseidon/tests/poseidon.md)
+      - **Abi/**
+        - [Mod](smart-contracts/openzeppelin-stylus/examples/poseidon/tests/abi/mod.md)
+  - **Precompiles/**
+    - [Cargo](smart-contracts/openzeppelin-stylus/examples/precompiles/Cargo.md)
+    - **Src/**
+      - [Lib](smart-contracts/openzeppelin-stylus/examples/precompiles/src/lib.md)
+      - [Main](smart-contracts/openzeppelin-stylus/examples/precompiles/src/main.md)
+    - **Tests/**
+      - [Precompiles](smart-contracts/openzeppelin-stylus/examples/precompiles/tests/precompiles.md)
+      - **Abi/**
+        - [Mod](smart-contracts/openzeppelin-stylus/examples/precompiles/tests/abi/mod.md)
+  - **Proxy/**
+    - [Cargo](smart-contracts/openzeppelin-stylus/examples/proxy/Cargo.md)
+    - **Src/**
+      - [Lib](smart-contracts/openzeppelin-stylus/examples/proxy/src/lib.md)
+      - [Main](smart-contracts/openzeppelin-stylus/examples/proxy/src/main.md)
+    - **Tests/**
+      - [Proxy](smart-contracts/openzeppelin-stylus/examples/proxy/tests/proxy.md)
+      - **Abi/**
+        - [Mod](smart-contracts/openzeppelin-stylus/examples/proxy/tests/abi/mod.md)
+      - **Mock/**
+        - [erc20](smart-contracts/openzeppelin-stylus/examples/proxy/tests/mock/mod.md)
+        - [Erc20](smart-contracts/openzeppelin-stylus/examples/proxy/tests/mock/erc20.md)
+  - **Safe Erc20/**
+    - [Cargo](smart-contracts/openzeppelin-stylus/examples/safe-erc20/Cargo.md)
+    - **Src/**
+      - [Lib](smart-contracts/openzeppelin-stylus/examples/safe-erc20/src/lib.md)
+      - [Main](smart-contracts/openzeppelin-stylus/examples/safe-erc20/src/main.md)
+    - **Tests/**
+      - [Safe Erc20 Address With No Code](smart-contracts/openzeppelin-stylus/examples/safe-erc20/tests/safe_erc20_address_with_no_code.md)
+      - [Safe Erc20 Erc1363](smart-contracts/openzeppelin-stylus/examples/safe-erc20/tests/safe_erc20_erc1363.md)
+      - [Safe Erc20 Erc1363 No Return](smart-contracts/openzeppelin-stylus/examples/safe-erc20/tests/safe_erc20_erc1363_no_return.md)
+      - [Safe Erc20 Erc1363 Return False](smart-contracts/openzeppelin-stylus/examples/safe-erc20/tests/safe_erc20_erc1363_return_false.md)
+      - [Safe Erc20 Erc1363 Return False On Erc20](smart-contracts/openzeppelin-stylus/examples/safe-erc20/tests/safe_erc20_erc1363_return_false_on_erc20.md)
+      - [Safe Erc20 Erc1363 Usdt Approval Behavior](smart-contracts/openzeppelin-stylus/examples/safe-erc20/tests/safe_erc20_erc1363_usdt_approval_behavior.md)
+      - [Safe Erc20 Erc20](smart-contracts/openzeppelin-stylus/examples/safe-erc20/tests/safe_erc20_erc20.md)
+      - [Safe Erc20 Erc20 That Always Returns False](smart-contracts/openzeppelin-stylus/examples/safe-erc20/tests/safe_erc20_erc20_that_always_returns_false.md)
+      - [Safe Erc20 Erc20 That Does Not Return](smart-contracts/openzeppelin-stylus/examples/safe-erc20/tests/safe_erc20_erc20_that_does_not_return.md)
+      - [Safe Erc20 Usdt Approval Behavior](smart-contracts/openzeppelin-stylus/examples/safe-erc20/tests/safe_erc20_usdt_approval_behavior.md)
+      - **Abi/**
+        - [Mod](smart-contracts/openzeppelin-stylus/examples/safe-erc20/tests/abi/mod.md)
+      - **Mock/**
+        - [erc1363](smart-contracts/openzeppelin-stylus/examples/safe-erc20/tests/mock/mod.md)
+        - [Erc1363](smart-contracts/openzeppelin-stylus/examples/safe-erc20/tests/mock/erc1363.md)
+        - [Erc1363 Force Approve](smart-contracts/openzeppelin-stylus/examples/safe-erc20/tests/mock/erc1363_force_approve.md)
+        - [Erc1363 No Return](smart-contracts/openzeppelin-stylus/examples/safe-erc20/tests/mock/erc1363_no_return.md)
+        - [Erc1363 Receiver](smart-contracts/openzeppelin-stylus/examples/safe-erc20/tests/mock/erc1363_receiver.md)
+        - [Erc1363 Return False](smart-contracts/openzeppelin-stylus/examples/safe-erc20/tests/mock/erc1363_return_false.md)
+        - [Erc1363 Return False On Erc20](smart-contracts/openzeppelin-stylus/examples/safe-erc20/tests/mock/erc1363_return_false_on_erc20.md)
+        - [Erc1363 Spender](smart-contracts/openzeppelin-stylus/examples/safe-erc20/tests/mock/erc1363_spender.md)
+        - [Erc20](smart-contracts/openzeppelin-stylus/examples/safe-erc20/tests/mock/erc20.md)
+        - [Erc20 Force Approve](smart-contracts/openzeppelin-stylus/examples/safe-erc20/tests/mock/erc20_force_approve.md)
+        - [Erc20 No Return](smart-contracts/openzeppelin-stylus/examples/safe-erc20/tests/mock/erc20_no_return.md)
+        - [Erc20 Return False](smart-contracts/openzeppelin-stylus/examples/safe-erc20/tests/mock/erc20_return_false.md)
+  - **Upgradeable Beacon/**
+    - [Cargo](smart-contracts/openzeppelin-stylus/examples/upgradeable-beacon/Cargo.md)
+    - **Src/**
+      - [Lib](smart-contracts/openzeppelin-stylus/examples/upgradeable-beacon/src/lib.md)
+      - [Main](smart-contracts/openzeppelin-stylus/examples/upgradeable-beacon/src/main.md)
+    - **Tests/**
+      - [Upgradeable Beacon](smart-contracts/openzeppelin-stylus/examples/upgradeable-beacon/tests/upgradeable-beacon.md)
+      - **Abi/**
+        - [Mod](smart-contracts/openzeppelin-stylus/examples/upgradeable-beacon/tests/abi/mod.md)
+      - **Mock/**
+        - [erc20](smart-contracts/openzeppelin-stylus/examples/upgradeable-beacon/tests/mock/mod.md)
+        - [Erc20](smart-contracts/openzeppelin-stylus/examples/upgradeable-beacon/tests/mock/erc20.md)
+  - **Uups Proxy/**
+    - [Cargo](smart-contracts/openzeppelin-stylus/examples/uups-proxy/Cargo.md)
+    - **Src/**
+      - [Lib](smart-contracts/openzeppelin-stylus/examples/uups-proxy/src/lib.md)
+      - [Main](smart-contracts/openzeppelin-stylus/examples/uups-proxy/src/main.md)
+    - **Tests/**
+      - [Uups Proxy](smart-contracts/openzeppelin-stylus/examples/uups-proxy/tests/uups-proxy.md)
+      - **Abi/**
+        - [Mod](smart-contracts/openzeppelin-stylus/examples/uups-proxy/tests/abi/mod.md)
+  - **Uups Proxy New Version/**
+    - [Cargo](smart-contracts/openzeppelin-stylus/examples/uups-proxy-new-version/Cargo.md)
+    - **Src/**
+      - [Lib](smart-contracts/openzeppelin-stylus/examples/uups-proxy-new-version/src/lib.md)
+      - [Main](smart-contracts/openzeppelin-stylus/examples/uups-proxy-new-version/src/main.md)
+  - **Vesting Wallet/**
+    - [Cargo](smart-contracts/openzeppelin-stylus/examples/vesting-wallet/Cargo.md)
+    - **Src/**
+      - [Lib](smart-contracts/openzeppelin-stylus/examples/vesting-wallet/src/lib.md)
+      - [Main](smart-contracts/openzeppelin-stylus/examples/vesting-wallet/src/main.md)
+    - **Tests/**
+      - [Vesting Wallet](smart-contracts/openzeppelin-stylus/examples/vesting-wallet/tests/vesting-wallet.md)
+      - **Abi/**
+        - [Mod](smart-contracts/openzeppelin-stylus/examples/vesting-wallet/tests/abi/mod.md)
+      - **Mock/**
+        - [erc20](smart-contracts/openzeppelin-stylus/examples/vesting-wallet/tests/mock/mod.md)
+        - [Erc20](smart-contracts/openzeppelin-stylus/examples/vesting-wallet/tests/mock/erc20.md)
+        - [Erc20 Return False](smart-contracts/openzeppelin-stylus/examples/vesting-wallet/tests/mock/erc20_return_false.md)
