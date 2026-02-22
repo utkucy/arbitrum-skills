@@ -1,26 +1,5 @@
 # Arbitrum MCP Tools
 
-# Overview
-
-## Arbitrum MCP Tools 🚀🦾
-
-This project provides a set of tools for interacting with the Arbitrum blockchain via the Model Context Protocol (MCP), enabling AI assistants like Claude Desktop, Claude Code, Cursor, Windsurf, VS Code, Gemini CLI, Antigravity, and OpenAI Codex to perform blockchain operations.
-
-### Table of Contents 📚
-
-* [Overview](https://arbitrum-ai-hub.gitbook.io/docs)
-* [Setup Guide](https://arbitrum-ai-hub.gitbook.io/docs/arbitrum-mcp-tools/setup-guide)
-* [Project Structure](https://arbitrum-ai-hub.gitbook.io/docs/arbitrum-mcp-tools/project-structure)
-* [Network Tools](https://arbitrum-ai-hub.gitbook.io/docs/arbitrum-mcp-tools/network-mcp-tools)
-  * [Account Analysis](https://arbitrum-ai-hub.gitbook.io/docs/arbitrum-mcp-tools/network-mcp-tools/account-analysis)
-  * [Batch Operations](https://arbitrum-ai-hub.gitbook.io/docs/arbitrum-mcp-tools/network-mcp-tools/batch-operations)
-  * [Chain Data](https://arbitrum-ai-hub.gitbook.io/docs/arbitrum-mcp-tools/network-mcp-tools/chain-data)
-  * [Contract Interaction](https://arbitrum-ai-hub.gitbook.io/docs/arbitrum-mcp-tools/network-mcp-tools/contract-interaction)
-  * [Cross Chain](https://arbitrum-ai-hub.gitbook.io/docs/arbitrum-mcp-tools/network-mcp-tools/cross-chain-operations)
-  * [Development](https://arbitrum-ai-hub.gitbook.io/docs/arbitrum-mcp-tools/network-mcp-tools/development)
-* [Stylus MCP Tools](https://arbitrum-ai-hub.gitbook.io/docs/arbitrum-mcp-tools/stylus-mcp-tools)
-
-
 # Setup Guide 🛠️
 
 ## Prerequisites
@@ -689,5 +668,3 @@ Tools for Stylus development and interaction.
       * `projectPaths`: Array of paths to Stylus projects that should be deployed
       * `estimateGas`: Only estimate gas instead of deploying (optional boolean)
       * Uses `STYLUS_PRIVATE_KEY`, `STYLUS_PRIVATE_KEY_PATH`, or `STYLUS_KEYSTORE_PATH` environment variables for authentication.
-
-

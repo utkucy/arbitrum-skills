@@ -1,6 +1,0 @@
-# Stylus
-
-```toml
-[contract]
-
-```
