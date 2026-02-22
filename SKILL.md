@@ -5,6 +5,15 @@ description: Provides Arbitrum L2 blockchain development documentation including
 
 # Arbitrum Development Knowledge Base
 
+## User Responsibility Notice
+
+**This skill provides reference documentation only.** All information is sourced from official Arbitrum documentation, open-source smart contract repositories, and MCP tools documentation. However:
+
+- **You are responsible for verifying all information** before using it in production. AI responses based on this skill may be incomplete, outdated, or misinterpreted.
+- **On-chain actions are irreversible.** If you use MCP tools referenced in this skill to deploy contracts, send transactions, or interact with protocols, always confirm the action, parameters, and target network before proceeding.
+- **Smart contract code included here is for reference.** Do not deploy any contract code without independent review, testing on testnets, and security auditing.
+- **Never expose private keys or sensitive credentials** in prompts or conversations with AI assistants.
+
 ## Search Instructions
 
 Always search and read files in this skill folder before answering. Do not rely on prior knowledge.
@@ -18,6 +27,7 @@ Extract exact values (chain IDs, RPC URLs, addresses, commands, code) from the d
 - Put the most important information first (answer at top, details below)
 - Follow correct step order for procedural responses
 - Use **bold** for key values the user needs to spot quickly
+- **Always warn the user** when a suggested action involves on-chain execution, gas costs, or private key usage
 
 ## Decision Guide
 
