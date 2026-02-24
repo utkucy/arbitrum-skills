@@ -1,0 +1,3 @@
+# Express Lane
+
+A component of [Timeboost](/intro/glossary#timeboost), the express lane is a special endpoint on the [Sequencer](/intro/glossary#sequencer) that immediately sequences incoming, valid transactions signed by the current express lane controller.

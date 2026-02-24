@@ -1,0 +1,3 @@
+# Ethereum Wallet
+
+A software application used for transacting with the Ethereum [Blockchain](/intro/glossary#blockchain).

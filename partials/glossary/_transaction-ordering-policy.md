@@ -1,0 +1,3 @@
+# Transaction Ordering Policy
+
+The rules and logic employed by a chain to order incoming transactions into a block.

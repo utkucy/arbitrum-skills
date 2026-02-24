@@ -1,0 +1,3 @@
+# Custom Arb-Token
+
+Any child chain token contract registered to the [Arb Token Bridge](/intro/glossary#arb-token-bridge) that isn't a standard arb-token (i.e., a token that uses any gateway other than the [`StandardERC20` gateway](/intro/glossary#standarderc20-gateway) ).

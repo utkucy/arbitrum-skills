@@ -1,0 +1,4 @@
+# Decentralized application
+
+A decentralized application typically consists of smart contracts as well as a user-interface for interacting with them.
+Note: In our documentation, "apps" and "decentralized applications" are used interchangeably.

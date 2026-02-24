@@ -1,0 +1,3 @@
+# Custom gateway
+
+Any [Token Gateway](/intro/glossary#token-gateway) that isn't the [`StandardERC20` gateway](/intro/glossary#standarderc20-gateway).

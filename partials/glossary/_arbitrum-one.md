@@ -1,0 +1,3 @@
+# Arbitrum One
+
+The first [Arbitrum Rollup Chain](/intro/glossary#arbitrum-rollup-chain) running on Ethereum mainnet. Great for decentralized finance and other use-cases that demand strong security guarantees. Governed by the [Arbitrum DAO](https://docs.arbitrum.foundation/gentle-intro-dao-governance).

@@ -1,0 +1,3 @@
+# First Come First Serve (FCFS)
+
+A type of [Transaction Ordering Policy](/intro/glossary#transaction-ordering-policy) used by the sequencer in Arbitrum chains whereby incoming transactions are sequenced into a block in the order that the transactions arrived.

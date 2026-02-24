@@ -1,0 +1,3 @@
+# Fraud proof
+
+The means by which an [Active Validator](/intro/glossary#active-validator) proves to its underlying chain that an invalid state transition has taken place.

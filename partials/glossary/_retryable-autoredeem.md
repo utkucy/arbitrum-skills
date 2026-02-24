@@ -1,0 +1,3 @@
+# Retryable Autoredeem
+
+The "automatic" (i.e., requiring no additional user action) execution of a [Retryable Ticket](/intro/glossary#retryable-ticket) on an Arbitrum chain.

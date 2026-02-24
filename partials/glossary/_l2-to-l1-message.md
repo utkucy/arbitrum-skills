@@ -1,0 +1,3 @@
+# L2 to L1 Message
+
+A message initiated from within an Arbitrum chain to be eventually executed on [Layer 1 (parent chain)](/intro/glossary#layer-1-l1) (e.g., token or Ether withdrawals). On Rollup chains like [Arbitrum One](/intro/glossary#arbitrum-one), the [Challenge Period](/intro/glossary#challenge-period) must pass before a child to parent chain message is executed.

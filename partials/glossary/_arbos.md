@@ -1,0 +1,3 @@
+# ArbOS
+
+Arbitrum's "operating system" that trustlessly handles system-level operations; includes the ability to emulate the EVM.

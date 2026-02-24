@@ -1,0 +1,3 @@
+# Force-Inclusion
+
+Censorship resistant path for including a message into an Arbitrum chain via the [Delayed Inbox](/intro/glossary#delayed-inbox) on its [Parent chain](/intro/glossary#parent-chain); bypasses any Sequencer involvement.

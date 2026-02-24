@@ -1,0 +1,3 @@
+# Arbitrum Classic
+
+[Old Arbitrum stack](https://github.com/OffchainLabs/arbitrum) that used custom virtual machine ("AVM"); no public Arbitrum chain uses the classic stack as of 8/31/2022 (they instead use [Arbitrum Nitro](/intro/glossary#arbitrum-nitro).)

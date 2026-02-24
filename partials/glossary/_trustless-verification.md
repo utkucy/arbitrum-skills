@@ -1,0 +1,5 @@
+# Trustless verification
+
+#### Trustless verification
+
+Validators confirm assertions, ensuring transactions adhere to the protocol rules.

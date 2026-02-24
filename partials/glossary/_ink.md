@@ -1,0 +1,3 @@
+# Ink
+
+The equivalent of gas in the [Stylus](/intro/glossary#stylus) vm. Ink is introduced for finer granularity than gas offers since Stylus's operations are considerably cheaper than their EVM analogs.

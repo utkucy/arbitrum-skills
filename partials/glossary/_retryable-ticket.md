@@ -1,0 +1,3 @@
+# Retryable Ticket
+
+A parent to child cross chain message initiated by a parent chain transaction sent to an Arbitrum chain for execution (e.g., a token deposit).

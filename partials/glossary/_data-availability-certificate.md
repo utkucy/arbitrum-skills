@@ -1,0 +1,3 @@
+# Data Availability Certificate
+
+Signed promise from a [Data Availability Committee (DAC)](/intro/glossary#data-availability-committee-dac) attesting to the availability of a batch of data for an [Arbitrum AnyTrust Chain](/intro/glossary#arbitrum-anytrust-chain).

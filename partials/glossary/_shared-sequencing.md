@@ -1,0 +1,3 @@
+# Shared Sequencing
+
+A protocol design space in which multiple rollups use the same entity as their [Sequencer](/intro/glossary#sequencer); potential benefits include enhanced interoperability and credible neutrality.

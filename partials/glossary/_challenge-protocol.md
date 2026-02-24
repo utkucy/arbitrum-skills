@@ -1,0 +1,3 @@
+# Challenge protocol
+
+The protocol by which assertions are submitted, disputed, and ultimately confirmed. The Challenge Protocol guarantees that only valid [assertions](/intro/glossary#assertion) will be confirmed provided that there is at least one honest [active validator](/intro/glossary#active-validator).

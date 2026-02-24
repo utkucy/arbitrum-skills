@@ -1,0 +1,3 @@
+# Layer 3 (L3)
+
+An Arbitrum chain whose core contract reside on an Arbitrum [Layer 2 (L2)](/intro/glossary#layer-2-l2) chain.

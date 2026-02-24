@@ -1,0 +1,3 @@
+# Wallet
+
+When referring to a wallet, we mean the user client software enabling user actions. Often, client software is a browser extension, mobile, or desktop app. Also refer to [Externally Owned Accounts](/intro/glossary#externally-owned-accounts).

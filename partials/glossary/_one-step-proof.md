@@ -1,0 +1,3 @@
+# One Step Proof
+
+Final step in a challenge; a single operation of the Arbitrum VM ([WASM](/intro/glossary#wasm) ) is executed on the underlying chain, and the validity of its state transition is verified.

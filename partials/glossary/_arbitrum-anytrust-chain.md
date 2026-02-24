@@ -1,0 +1,3 @@
+# Arbitrum AnyTrust Chain
+
+An [Arbitrum chain](/intro/glossary#arbitrum-chain) that implements the [Arbitrum AnyTrust Protocol](/intro/glossary#arbitrum-anytrust-protocol).

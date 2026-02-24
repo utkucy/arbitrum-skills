@@ -1,0 +1,3 @@
+# Client
+
+A program running on a user's machine, often in the user's browser, that interacts with contracts on an [Arbitrum chain](/intro/glossary#arbitrum-chain) and provides a user interface.

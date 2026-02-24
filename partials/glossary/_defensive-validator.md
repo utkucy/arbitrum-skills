@@ -1,0 +1,3 @@
+# Defensive Validator
+
+A [Validator](/intro/glossary#validator) that watches an Arbitrum chain and takes action (i.e., bonds and challenges) only when and if an invalid [Assertion](/intro/glossary#assertion) occurs.

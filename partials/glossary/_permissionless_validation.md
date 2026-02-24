@@ -1,0 +1,3 @@
+# Permissionless validation
+
+Anyone can become a validator by running an Arbitrum node, without permission.

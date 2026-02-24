@@ -114,7 +114,7 @@ For the complete file listing of all documentation, see [NAV-docs.md](NAV-docs.m
 ### For Devs
 *Developer tools, resources, and development frameworks*
 
-- **Subtopics:** Dev Tools And Resources, Oracles, Third Party Docs
+- **Subtopics:** Dev Tools And Resources, Oracles, Partials, Third Party Docs
 
 ### Get Started
 *Getting started with Arbitrum development*
@@ -140,18 +140,45 @@ For the complete file listing of all documentation, see [NAV-docs.md](NAV-docs.m
 - [Deploy a production chain: an overview](launch-arbitrum-chain/arbitrum-chain-sdk-introduction.md)
 - [Migrate between RaaSes](launch-arbitrum-chain/migrate-between-raases.md)
 - [Migrate from another stack to an Arbitrum chain](launch-arbitrum-chain/migrate-from-another-stack.md)
-- **Subtopics:** 02 Configure Your Chain, 03 Deploy An Arbitrum Chain, 04 Maintain Your Chain, 05 Customize Your Chain, 06 Third Party Integrations, 07 Arbitrum Node Runners, 08 Ecosystem Support, Concepts, Features, How Tos
+- **Subtopics:** 02 Configure Your Chain, 03 Deploy An Arbitrum Chain, 04 Maintain Your Chain, 05 Customize Your Chain, 06 Third Party Integrations, 07 Arbitrum Node Runners, 08 Ecosystem Support, Concepts, Features, How Tos, Partials
 
 ### Node Running
 *Node infrastructure and operations*
 
 - [Sequencer](node-running/sequencer-content-map.md)
+- **Subtopics:** Partials
 
 ### Notices
 *Important notices and announcements*
 
 - [Fusaka Compatibility Notice](notices/fusaka-upgrade-notice.md)
 - [Upgrade notice for ArbOS 51](notices/arbos51-upgrade-notice.md)
+
+### Partials
+
+- [ Client Flags](partials/_client-flags.md)
+- [ Reference Nova Specific](partials/_reference-nova-specific.md)
+- [ Troubleshooting Arbitrum Chain Partial](partials/_troubleshooting-arbitrum-chain-partial.md)
+- [ Troubleshooting Bridging Partial](partials/_troubleshooting-bridging-partial.md)
+- [ Troubleshooting Building Partial](partials/_troubleshooting-building-partial.md)
+- [ Troubleshooting Nodes Partial](partials/_troubleshooting-nodes-partial.md)
+- [ Troubleshooting Stylus Partial](partials/_troubleshooting-stylus-partial.md)
+- [ Troubleshooting Users Partial](partials/_troubleshooting-users-partial.md)
+- [Additional Configuration Parameters](partials/_additional-config-params.md)
+- [Arbitrum Contract Addresses Reference](partials/_reference-arbitrum-contract-addresses-partial.md)
+- [Arbitrum Glossary Definitions](partials/_glossary-partial.md)
+- [Arbitrum RPC Endpoints Reference](partials/_reference-arbitrum-rpc-endpoints-partial.md)
+- [Arbitrum: Introduction](partials/_gentle-intro-partial.md)
+- [BoLD Configuration Parameters](partials/_bold-config-params.md)
+- [Chain parameters](partials/_reference-chain-parameters.md)
+- [Documentation Contribution Guide](partials/_contribute-docs-partial.md)
+- [Faucet list](partials/_faucet-list-partial.md)
+- [Local Development Network Flags](partials/_local-devnet-flags.md)
+- [Multidimensional Content Controls](partials/_multidimensional-content-controls-partial.md)
+- [Not for Production Warning Banner](partials/_not-for-production-banner-partial.md)
+- [Public Preview Banner](partials/_public-preview-banner-partial.md)
+- [Third-party RPC Endpoints Reference](partials/_reference-third-party-rpc-endpoints-partial.md)
+- **Subtopics:** Glossary
 
 ### Run Arbitrum Node
 *Running Arbitrum full nodes and validators*
@@ -165,7 +192,7 @@ For the complete file listing of all documentation, see [NAV-docs.md](NAV-docs.m
 - [How to run a local Nitro dev node](run-arbitrum-node/05-run-nitro-dev-node.md)
 - [L1 Ethereum beacon chain RPC providers](run-arbitrum-node/04-l1-ethereum-beacon-chain-rpc-providers.md)
 - [Troubleshooting: Run a node](run-arbitrum-node/06-troubleshooting.md)
-- **Subtopics:** Arbos Releases, More Types, Nitro, Sequencer
+- **Subtopics:** Arbos Releases, More Types, Nitro, Partials, Sequencer
 
 ### Sdk
 *Arbitrum SDK documentation - bridgers, entities, messaging*
@@ -183,7 +210,7 @@ For the complete file listing of all documentation, see [NAV-docs.md](NAV-docs.m
 - [Using Stylus CLI](stylus/using-cli.md)
 - [Write Stylus Contracts](stylus/overview.md)
 - [Write Stylus Contracts](stylus/stylus-content-map.md)
-- **Subtopics:** Concepts, How Tos, Reference
+- **Subtopics:** Concepts, How Tos, Partials, Reference
 
 ## Smart Contract Source Code
 

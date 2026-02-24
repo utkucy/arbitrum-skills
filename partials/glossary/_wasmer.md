@@ -1,0 +1,3 @@
+# WASMer
+
+A popular WebAssembly runtime for executing [WASM](/intro/glossary#wasm) binaries. [A fork of WASMer](https://github.com/OffchainLabs/wasmer) is used for executing [Stylus](/intro/glossary#stylus) programs. WASMer executes considerably faster than Geth executes EVM code, contributing to Stylus's lower fees.

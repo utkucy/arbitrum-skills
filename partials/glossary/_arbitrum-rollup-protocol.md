@@ -1,0 +1,3 @@
+# Arbitrum Rollup Protocol
+
+A trustless, permissionless Arbitrum protocol that uses its underlying base layer for data availability and inherits its security. This protocol is implemented by our [Arbitrum One](/intro/glossary#arbitrum-one) chain.

@@ -1,0 +1,3 @@
+# Active Validator
+
+A bonded [Validator](/intro/glossary#validator) that makes disputable assertions to advance the state of an Arbitrum chain or to challenge the validity of others' assertions. (Not to be confused with the [Sequencer](/intro/glossary#sequencer).)

@@ -1,0 +1,3 @@
+# Arbitrum Rollup Chain
+
+An [Arbitrum chain](/intro/glossary#arbitrum-chain) that implements the [Arbitrum Rollup Protocol](/intro/glossary#arbitrum-rollup-protocol).

@@ -1,0 +1,36 @@
+#  ArbosTest
+
+<table>
+  <thead>
+    <tr>
+      <th>Method</th>
+      <th>Solidity interface</th>
+      <th>Go implementation</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <code>burnArbGas()</code>
+      </td>
+      <td>
+        <a
+          href="https://github.com/OffchainLabs/nitro-precompile-interfaces/blob/f49a4889b486fd804a7901203f5f663cfd1581c8/ArbosTest.sol#L13"
+          target="_blank"
+        >
+          Interface
+        </a>
+      </td>
+      <td>
+        <a
+          href="https://github.com/OffchainLabs/nitro/blob/v3.9.4/precompiles/ArbosTest.go#L18"
+          target="_blank"
+        >
+          Implementation
+        </a>
+      </td>
+      <td>BurnArbGas unproductively burns the amount of L2 ArbGas</td>
+    </tr>
+  </tbody>
+</table>

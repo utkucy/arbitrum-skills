@@ -1,0 +1,80 @@
+#  ArbFunctionTable
+
+<table>
+  <thead>
+    <tr>
+      <th>Method</th>
+      <th>Solidity interface</th>
+      <th>Go implementation</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <code>upload()</code>
+      </td>
+      <td>
+        <a
+          href="https://github.com/OffchainLabs/nitro-precompile-interfaces/blob/f49a4889b486fd804a7901203f5f663cfd1581c8/ArbFunctionTable.sol#L15"
+          target="_blank"
+        >
+          Interface
+        </a>
+      </td>
+      <td>
+        <a
+          href="https://github.com/OffchainLabs/nitro/blob/v3.9.4/precompiles/ArbFunctionTable.go#L19"
+          target="_blank"
+        >
+          Implementation
+        </a>
+      </td>
+      <td>Upload does nothing</td>
+    </tr>
+    <tr>
+      <td>
+        <code>size()</code>
+      </td>
+      <td>
+        <a
+          href="https://github.com/OffchainLabs/nitro-precompile-interfaces/blob/f49a4889b486fd804a7901203f5f663cfd1581c8/ArbFunctionTable.sol#L20"
+          target="_blank"
+        >
+          Interface
+        </a>
+      </td>
+      <td>
+        <a
+          href="https://github.com/OffchainLabs/nitro/blob/v3.9.4/precompiles/ArbFunctionTable.go#L24"
+          target="_blank"
+        >
+          Implementation
+        </a>
+      </td>
+      <td>Size returns the empty table's size, which is 0</td>
+    </tr>
+    <tr>
+      <td>
+        <code>get(address addr, uint256 index)</code>
+      </td>
+      <td>
+        <a
+          href="https://github.com/OffchainLabs/nitro-precompile-interfaces/blob/f49a4889b486fd804a7901203f5f663cfd1581c8/ArbFunctionTable.sol#L25"
+          target="_blank"
+        >
+          Interface
+        </a>
+      </td>
+      <td>
+        <a
+          href="https://github.com/OffchainLabs/nitro/blob/v3.9.4/precompiles/ArbFunctionTable.go#L29"
+          target="_blank"
+        >
+          Implementation
+        </a>
+      </td>
+      <td>Get reverts since the table is empty</td>
+    </tr>
+  </tbody>
+</table>

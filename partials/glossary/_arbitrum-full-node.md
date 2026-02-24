@@ -1,0 +1,3 @@
+# Arbitrum Full Node
+
+A party who keeps track of the state of an Arbitrum chain and receives remote procedure calls (RPCs) from clients. Analogous to a non-staking parent Ethereum node.

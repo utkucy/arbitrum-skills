@@ -1,0 +1,3 @@
+# Arbitrum Nitro
+
+Current Arbitrum tech stack; runs a fork of [Geth](/intro/glossary#geth) and uses WebAssembly as its underlying VM for fraud proofs.

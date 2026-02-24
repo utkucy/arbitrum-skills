@@ -1,0 +1,3 @@
+# Delayed Inbox
+
+A contract that holds [Parent chain](/intro/glossary#parent-chain) initiated messages to be eventually included in the [Sequencer Inbox](/intro/glossary#sequencer). Inclusion of messages doesn't depend on the [Sequencer](/intro/glossary#sequencer).

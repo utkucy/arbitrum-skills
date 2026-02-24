@@ -1,0 +1,3 @@
+# Blockchain
+
+A distributed digital ledger that is used to record transactions and store data in a secure, transparent, and tamper-resistant way, notably in cryptocurrency protocols.

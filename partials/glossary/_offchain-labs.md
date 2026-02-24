@@ -1,0 +1,3 @@
+# Offchain Labs
+
+The initial builders Arbitrum; current contributors to the Arbitrum ecosystem and service providers to the [Arbitrum DAO](https://docs.arbitrum.foundation/gentle-intro-dao-governance). Offchain also runs and maintains the [Sequencers](/intro/glossary#sequencer) for [Arbitrum One](/intro/glossary#arbitrum-one) and [Arbitrum Nova](/intro/glossary#arbitrum-nova).

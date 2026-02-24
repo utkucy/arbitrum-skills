@@ -1,0 +1,3 @@
+# Retryable Redeem
+
+The execution of a [Retryable Ticket](/intro/glossary#retryable-ticket) on a child chain; can be automatic (see [Retryable Autoredeem](/intro/glossary#retryable-autoredeem)) or manual via a user-initiated child chain transaction.

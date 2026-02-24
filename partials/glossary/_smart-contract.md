@@ -1,0 +1,3 @@
+# Smart Contract
+
+A computer program whose operations are defined and executed within a blockchain consensus protocol.

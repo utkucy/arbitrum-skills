@@ -1,0 +1,3 @@
+# Bridge
+
+A set of smart contracts for sending [Cross-chain messages](/intro/glossary#crosschain-message) between blockchains. Every [Arbitrum chain](/intro/glossary#arbitrum-chain) includes a bridge to/from its [Parent chain](/intro/glossary#parent-chain).

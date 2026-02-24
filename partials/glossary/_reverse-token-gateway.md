@@ -1,0 +1,3 @@
+# Reverse Token Gateway
+
+A [Token Gateway](/intro/glossary#token-gateway) in which the [Child chain](/intro/glossary#child-chain) gateway contract escrows and releases tokens, which the [Parent chain](/intro/glossary#parent-chain) Gateway contract mints and burns tokens. This in the inverse to how "typical" gateways work.

@@ -1,0 +1,3 @@
+# Config Dedicated Throughput
+
+You may need dedicated throughput if your chain requires high performance or consistent resource availability. Running your chain on its own Arbitrum chain significantly increases resource availability, so you don’t need to compete for computation and storage resources.

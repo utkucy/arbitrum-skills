@@ -1,0 +1,3 @@
+# Gateway Router
+
+Contracts in the [Arb Token Bridge](/intro/glossary#arb-token-bridge) responsible for mapping tokens to their appropriate [Token Gateway](/intro/glossary#token-gateway).

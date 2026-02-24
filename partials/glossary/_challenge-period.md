@@ -1,0 +1,3 @@
+# Challenge Period
+
+Window of time (one week on Arbitrum One) over which an [Assertion](/intro/glossary#assertion) can be challenged, and after which the assertion can be confirmed.

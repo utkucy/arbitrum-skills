@@ -1,0 +1,3 @@
+# Externally Owned Accounts
+
+An externally owned account (EOA) is the account (public/private key pairs) that has a physical address location. Commonly referred to as a [wallet](/intro/glossary/#wallet), however, we distinguish an EOA from the user client software wallet.

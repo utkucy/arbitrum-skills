@@ -1,0 +1,3 @@
+# Batch Poster
+
+The batch poster is an Externally Owned Account (EOA) controlled by the Sequencer. It is responsible for submitting the compressed transaction batches to the Sequencer Inbox contract on the parent chain.

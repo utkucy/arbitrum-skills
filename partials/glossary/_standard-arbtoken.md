@@ -1,0 +1,3 @@
+# Standard Arb-Token
+
+An token contract on an Arbitrum chain deployed via the [`StandardERC20` gateway](/intro/glossary#standarderc20-gateway); offers basic `ERC-20` functionality in addition to deposit / withdrawal affordances.

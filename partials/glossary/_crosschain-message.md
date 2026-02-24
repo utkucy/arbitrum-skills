@@ -1,0 +1,3 @@
+# Cross-chain message
+
+An action taken on some chain A which asynchronously initiates an additional action on chain B.

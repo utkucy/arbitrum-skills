@@ -1,0 +1,3 @@
+# Parent chain
+
+EVM compatible chain that acts as the settlement layer for one or more Arbitrum Chains (aka [Child chain](/intro/glossary#child-chain) ). E.g., Ethereum is the parent chain of both Arbitrum One and Arbitrum Nova. Parent chain is synonymous with "underlying chain."

@@ -2,6 +2,8 @@
 
 # Setup Guide 🛠️
 
+> **Security Notice:** This setup configures your AI assistant to interact with the Arbitrum blockchain through MCP tools. Some of these tools can execute real on-chain operations (contract deployments, transaction simulations) that may cost gas and are irreversible. Always review AI-suggested actions before confirming, test on Arbitrum Sepolia before mainnet, and never share private keys in conversations or prompts.
+
 ## Prerequisites
 
 * Node.js v20.x or higher
@@ -70,6 +72,13 @@ After installation completes:
 3. The Arbitrum MCP tools will be available automatically
 
 ## Environment Variables Setup
+
+> **Security Best Practices:**
+>
+> * Use **keystore files** (`STYLUS_KEYSTORE_PATH`) instead of storing private keys as plain text whenever possible.
+> * Never commit `.env` files, shell profiles, or config files containing API keys to version control.
+> * Rotate API keys periodically and immediately revoke any that may have been exposed.
+> * For production deployments, use a hardware wallet or a dedicated secrets manager.
 
 The MCP tools require API keys to function. Set these in your shell profile:
 
@@ -330,6 +339,15 @@ npx arbitrum-mcp-tools serve
 
 5. Restart the AI assistant and verify your tools are available.
 
+### Security Considerations
+
+When adding or modifying tools, keep the following in mind:
+
+* Tools that perform **write operations** (deploying contracts, sending transactions) should clearly document this in their description so users understand the risk.
+* **Never hardcode** private keys, API keys, or sensitive data in tool implementations. Always read from `process.env`.
+* Tool descriptions are shown to AI assistants — make them accurate so the AI correctly understands what each tool does before suggesting it to users.
+* Test all new tools on **Arbitrum Sepolia** before using them against mainnet.
+
 ### Contributing 🙌
 
 Contributions are welcome! Please feel free to submit a Pull Request.
@@ -340,6 +358,8 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 
 # Network MCP Tools
+
+> **Note:** Network MCP tools include both **read-only** operations (balance queries, block data, transaction history) and **write-capable** operations (transaction simulation, gas estimation). Read-only tools carry no on-chain risk. Tools like `simulateTransaction` and `estimateGas` do not broadcast transactions but interact with RPC endpoints. Always verify the tool's behavior and parameters before use.
 
 
 # Account Analysis
@@ -567,6 +587,8 @@ Tools for development process.<br>
 
 
 # Stylus MCP Tools
+
+> **Important:** Several Stylus tools (`deployStylusContract`, `activateStylusContract`, `cacheStylusContract`, `deployMultipleStylusContracts`) execute **real on-chain transactions** that consume gas and are irreversible. They require private key access through environment variables. Always verify the target network (mainnet vs testnet), review deployment parameters, and confirm gas estimates before approving any deployment or activation through your AI assistant.
 
 Tools for Stylus development and interaction.
 

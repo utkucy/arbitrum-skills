@@ -1,0 +1,3 @@
+# Dissection
+
+A step in the [Challenge protocol](/intro/glossary#challenge-protocol) in which two challenging parties interactively narrow down their disagreement until they reach a [One Step Proof](/intro/glossary#one-step-proof).

@@ -1,0 +1,3 @@
+# Arb Token Bridge
+
+A series of contracts on an Arbitrum chain and its underlying chain that facilitate trustless movement of `ERC-20` tokens between the two layers.

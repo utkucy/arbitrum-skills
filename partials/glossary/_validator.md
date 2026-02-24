@@ -1,0 +1,3 @@
+# Validator
+
+An [Arbitrum Full Node](/intro/glossary#arbitrum-full-node) that tracks the status of the chains' [Assertion](/intro/glossary#assertion)s. A validator may be a [Watchtower Validator](/intro/glossary#watchtower-validator), a [Defensive Validator](/intro/glossary#defensive-validator), or an [Active Validator](/intro/glossary#active-validator).
